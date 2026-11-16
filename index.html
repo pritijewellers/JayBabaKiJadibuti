@@ -447,10 +447,10 @@
                             <!-- Portrait Viewport -->
                             <div class="relative rounded-2xl overflow-hidden border border-kansa-400/40 bg-obsidian-950 aspect-[4/5] max-h-[410px] mx-auto group">
                                 <img id="hero-baba-img" 
-                                     src="watermarked_img_10509370423109906561.png" 
+                                     src="1826.png" 
                                      alt="Shri Shri 1008 Jay Baba (200 Years Old)" 
                                      class="w-full h-full object-cover object-top transition-all duration-700 ease-expo group-hover:scale-[1.03]"
-                                     onerror="this.onerror=null; this.src='https://placehold.co/600x750/0D1C14/C5A059?text=Shri+Jay+Baba+(1826+AD)';">
+                                     onerror="if(!this.dataset.triedAlt){this.dataset.triedAlt='1';this.src='watermarked_img_10509370423109906561.png';}else{this.onerror=null;this.src='https://placehold.co/600x750/0D1C14/C5A059?text=Jay+Baba+(200+Years+Old)';}">
                                 
                                 <!-- Subtle Vignette & Metadata Overlay -->
                                 <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/70 to-transparent p-5 text-left">
@@ -539,10 +539,10 @@
                                 </div>
                                 <div class="relative rounded-xl overflow-hidden aspect-[3/4] bg-obsidian-950">
                                     <img id="darshan-sage-img" 
-                                         src="watermarked_img_10509370423109906561.png" 
+                                         src="1826.png" 
                                          alt="Shri Jay Baba 200 Years Old Himalayan Form" 
                                          class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700 ease-expo"
-                                         onerror="this.onerror=null; this.src='https://placehold.co/450x600/0D1C14/C5A059?text=1826+Tapasvi+Form';">
+                                         onerror="if(!this.dataset.triedAlt){this.dataset.triedAlt='1';this.src='watermarked_img_10509370423109906561.png';}else{this.onerror=null;this.src='https://placehold.co/450x600/0D1C14/C5A059?text=Jay+Baba+(200+Years+Old)';}">
                                     <span class="absolute bottom-2.5 left-2.5 bg-obsidian-950/90 backdrop-blur-xs text-kansa-300 font-mono text-[10px] uppercase tracking-wider px-2.5 py-1 rounded border border-kansa-400/30">
                                         🏔️ True Himalayan Form
                                     </span>
@@ -602,10 +602,11 @@
 
                                 <!-- Clipped Layer: 1826 Himalayan Tapasvi -->
                                 <div id="kaya-clip-layer" class="absolute inset-0 overflow-hidden" style="clip-path: inset(0 50% 0 0);">
-                                    <img src="watermarked_img_10509370423109906561.png" 
+                                    <img id="slider-sage-img"
+                                         src="1826.png" 
                                          alt="1826 Tapasvi Form" 
                                          class="w-full h-full object-cover object-top"
-                                         onerror="this.onerror=null; this.src='https://placehold.co/600x750/0D1C14/C5A059?text=1826+Tapasvi+Form';">
+                                         onerror="if(!this.dataset.triedAlt){this.dataset.triedAlt='1';this.src='watermarked_img_10509370423109906561.png';}else{this.onerror=null;this.src='https://placehold.co/600x750/0D1C14/C5A059?text=Jay+Baba+(200+Years+Old)';}">
                                     <span class="absolute top-3 left-3 bg-obsidian-950/90 text-kansa-300 font-mono text-[10px] font-semibold px-2.5 py-1 rounded border border-kansa-400/30">
                                         1826 TAPASVI (AGE 200)
                                     </span>
@@ -2800,6 +2801,7 @@
             const btnDisguise = document.getElementById('btn-avatar-disguise');
 
             if (mode === 'disguise') {
+                delete heroImg.dataset.triedAlt;
                 heroImg.src = "WhatsApp Image 2026-11-11 at 11.27.54 AM.jpeg";
                 era.textContent = "URBAN INCOGNITO • 2026 KALYUGI DISGUISE";
                 plateCode.textContent = "ARCHIVE PLATE #JB-2026-B";
@@ -2808,7 +2810,8 @@
                 btnSage.className = "py-2.5 px-3 rounded-xl text-xs font-medium text-alabaster-200 hover:text-white transition-all flex items-center justify-center gap-1.5";
                 showToast("🎒 Viewing Plate II: Jay Baba's 2026 Kalyugi Backpack Disguise.");
             } else {
-                heroImg.src = "watermarked_img_10509370423109906561.png";
+                delete heroImg.dataset.triedAlt;
+                heroImg.src = "1826.png";
                 era.textContent = "VASUKI TAL GLACIER • 1826 TAPASVI FORM";
                 plateCode.textContent = "ARCHIVE PLATE #JB-1826-A";
                 caption.textContent = "Observed meditating with Rudraksha, Kamandalu & rectangular spectacles.";
